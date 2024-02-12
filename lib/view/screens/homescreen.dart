@@ -302,7 +302,7 @@ Widget Category(String text, int index, double height) {
 Widget datalist(
     {required String img,
     required String name,
-      required String price,
+      required int price,
     required int sold,
     required int like,
     required double width,
@@ -414,7 +414,7 @@ Widget datalist(
                     child: Row(
                       children: [
                         Text(
-                          price,
+                          "'$price' USD",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: height * 0.015,

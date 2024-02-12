@@ -104,7 +104,7 @@ class _ThirdState extends State<Third> {
                       color: Colors.grey,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    child: Text(data['price']),
+                    child: Text("${data['price']} USD"),
                   ),
                 ],
               ),
@@ -183,7 +183,11 @@ class _ThirdState extends State<Third> {
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                  data['quantity']--;
+                              });
+                            },
                             icon: Icon(Icons.remove_shopping_cart_outlined,
                                 size: height * 0.022)),
                       ),
@@ -208,7 +212,11 @@ class _ThirdState extends State<Third> {
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                data['quantity']++;
+                              });
+                            },
                             icon: Icon(Icons.add_shopping_cart,
                                 size: height * 0.022)),
                       )
@@ -219,7 +227,7 @@ class _ThirdState extends State<Third> {
             ),
             InkWell(
               onTap: (){
-                Cart.add(data);
+                cart.add(data);
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),

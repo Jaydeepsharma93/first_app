@@ -1,5 +1,6 @@
+import 'package:first_app/view/screens/cart.dart';
 import 'package:flutter/material.dart';
-
+import '../../utils/cartlist.dart';
 import '../../utils/listOfcategory.dart';
 import '../../utils/listdata.dart';
 
@@ -414,7 +415,7 @@ Widget datalist(
                     child: Row(
                       children: [
                         Text(
-                          "'$price' USD",
+                          "$price USD",
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: height * 0.015,

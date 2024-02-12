@@ -1,3 +1,4 @@
+import 'package:first_app/view/screens/cart.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/cartlist.dart';
@@ -21,7 +22,9 @@ class _ThirdState extends State<Third> {
         appBar: AppBar(
           backgroundColor: Color(0xffaebecb),
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: Icon(
                 Icons.arrow_back_ios,
                 color: Colors.white,
@@ -184,10 +187,13 @@ class _ThirdState extends State<Third> {
                         ),
                         child: IconButton(
                             onPressed: () {
-                              setState(() {
-                                  data['quantity']--;
-                              });
-                            },
+                              if(data['quantity'] > 0)
+                                {
+                                setState(() {
+                                data['quantity']--;
+                                });
+                                  }
+                                },
                             icon: Icon(Icons.remove_shopping_cart_outlined,
                                 size: height * 0.022)),
                       ),
@@ -228,6 +234,12 @@ class _ThirdState extends State<Third> {
             InkWell(
               onTap: (){
                 cart.add(data);
+                setState(() {
+                  for(int i=0;i<cart.length;i++)
+                  {
+                    count+=(cart[i]['quantity']*cart[i]['price']);
+                  }
+                });
               },
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),

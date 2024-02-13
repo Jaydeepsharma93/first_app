@@ -126,20 +126,20 @@ class _CartState extends State<Cart> {
               ),
             ),
             Container(
-              height:65,
-              color: Colors.grey,
+              height:height*0.08,
+              color: Colors.black26,
               child: Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(15),
                 child: Row(
                   children: [
                     Text('Total :',style: TextStyle(
-                      fontSize: height*0.04,
+                      fontSize: height*0.035,
                       fontWeight: FontWeight.bold,
                       color: Colors.white
                     )),
-                    SizedBox(width:width*0.05),
+                    SizedBox(width:width*0.03),
                     Text('$count USD',style: TextStyle(
-                        fontSize: height*0.03,
+                        fontSize: height*0.025,
                         height: 2,
                         fontWeight: FontWeight.bold,
                         color: Colors.white

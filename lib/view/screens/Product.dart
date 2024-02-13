@@ -80,7 +80,7 @@ class _ThirdState extends State<Third> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
                 data['name'],
                 style: TextStyle(
@@ -88,7 +88,7 @@ class _ThirdState extends State<Third> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -104,7 +104,7 @@ class _ThirdState extends State<Third> {
                     height: height * 0.04,
                     width: width * 0.25,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: Colors.black26,
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text("${data['price']} USD"),
@@ -113,15 +113,15 @@ class _ThirdState extends State<Third> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
               child: Text(
                 "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis",
                 style:
-                    TextStyle(fontSize: height * 0.02, color: Colors.black54),
+                    TextStyle(fontSize: height * 0.019, color: Colors.black54),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 20,top: 10,),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -141,7 +141,7 @@ class _ThirdState extends State<Third> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -182,7 +182,7 @@ class _ThirdState extends State<Third> {
                         height: height * 0.032,
                         width: width * 0.085,
                         decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.black26,
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: IconButton(
@@ -194,7 +194,7 @@ class _ThirdState extends State<Third> {
                                 });
                                   }
                                 },
-                            icon: Icon(Icons.remove_shopping_cart_outlined,
+                            icon: Icon(Icons.remove,
                                 size: height * 0.022)),
                       ),
                       SizedBox(width: width * 0.015),
@@ -214,7 +214,7 @@ class _ThirdState extends State<Third> {
                         height: height * 0.032,
                         width: width * 0.085,
                         decoration: BoxDecoration(
-                          color: Colors.grey,
+                          color: Colors.black26,
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: IconButton(
@@ -223,7 +223,7 @@ class _ThirdState extends State<Third> {
                                 data['quantity']++;
                               });
                             },
-                            icon: Icon(Icons.add_shopping_cart,
+                            icon: Icon(Icons.add,
                                 size: height * 0.022)),
                       )
                     ],
